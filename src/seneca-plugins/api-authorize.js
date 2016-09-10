@@ -8,7 +8,7 @@ const roles = require( '../roles' );
 module.exports = function () {
 
   // Promisify the seneca .act() method
-  let act = Promise.promisify( this.act, { context: this });
+  const act = Promise.promisify( this.act, { context: this });
 
   // Get user
   this.add( 'role:api,path:authorize,cmd:userCan', function( msg, done ) {
@@ -31,7 +31,7 @@ module.exports = function () {
 
       }
 
-      let role = decoded.role;
+      const role = decoded.role;
 
       if ( _.isEmpty( roles[ role ] ) ) {
 
