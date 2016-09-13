@@ -13,6 +13,12 @@ module.exports = function () {
   // Get user
   this.add( 'role:api,path:authorize,cmd:userCan', function( msg, done ) {
 
+    if ( ! msg.context ) {
+
+      msg.context = {};
+
+    }
+
     if ( _.isEmpty( msg.consumerJWT ) ) {
 
       done( null, { can: false });
@@ -38,6 +44,12 @@ module.exports = function () {
         done( null, { can: false });
 
         return;
+
+      }
+
+      if ( 'users:edit' === msg.what && msg.context.id && decoded.id === msg.context.id ) {
+
+        msg.what = 'self:edit';
 
       }
 

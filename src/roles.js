@@ -5,7 +5,9 @@ const _ = require( 'lodash' );
 const roles = {};
 
 // Basic
-roles.basic = [];
+roles.basic = [
+  'self:edit'
+];
 
 // Administrator
 roles.administrator = [
