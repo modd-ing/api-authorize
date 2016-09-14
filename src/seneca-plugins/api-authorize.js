@@ -47,7 +47,10 @@ module.exports = function () {
 
       }
 
-      if ( 'users:edit' === msg.what && msg.context.id && decoded.id === msg.context.id ) {
+      if (
+        ( 'users:edit' === msg.what && msg.context.id && decoded.id === msg.context.id ) ||
+        ( 'attachments:edit' === msg.what && msg.context.owner && decoded.id === msg.context.owner )
+      ) {
 
         msg.what = 'self:edit';
 

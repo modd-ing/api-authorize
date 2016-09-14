@@ -13,7 +13,8 @@ roles.basic = [
 roles.administrator = [
   'users:edit',
   'users:delete',
-  'roles:assign'
+  'roles:assign',
+  'attachments:edit'
 ];
 
 roles.administrator = _.uniq( _.concat(
