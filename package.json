@@ -13,9 +13,9 @@
     "bluebird": "^3.4.6",
     "dotenv": "^2.0.0",
     "jsonwebtoken": "^7.1.9",
-    "lodash": "^4.15.0",
-    "seneca": "^3.0.0",
+    "lodash": "^4.16.2",
+    "seneca": "^3.2.1",
     "seneca-amqp-transport": "^1.0.1",
-    "validator": "^5.6.0"
+    "validator": "^6.0.0"
   }
 }
